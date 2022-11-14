@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="14" time="121.536">
+    <testcase classname="F01_Register | users could register with new accounts" name="guest user could register with valid data successfully" time="13.14">
+        <system-out><![CDATA[Given user go to register page..............................................passed
+When user select gender type................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth................................................passed
+And user enter email "sama@yahoo.com" field.................................passed
+And user fills Password fields "Passw0rd#123" "Passw0rd#123"................passed
+Then user clicks on register button.........................................passed
+And success message is displayed............................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="7.513">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user login with valid credentials "sama@yahoo.com" and "Passw0rd#123"..passed
+And user press on login button..............................................passed
+Then user login to the system successfully..................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F02_Login | users could use login functionality to use their accounts" name="user can't login with invalid email and password" time="7.605">
+        <system-out><![CDATA[Given user go to login page.................................................passed
+When user login with invalid "wrong@example.com" and "P@ssw0rd".............passed
+And user press on login button..............................................passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="test currency selection" name="user can select euro currency" time="6.602">
+        <system-out><![CDATA[When user select euro option................................................passed
+Then euro symbol is displayed on all products...............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="search feature test" name="user can search by product name" time="6.743">
+        <system-out><![CDATA[When user click on search field.............................................passed
+And user search with "book".................................................passed
+Then user could find "book" relative results................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="search feature test" name="user can search by product name 2" time="6.718">
+        <system-out><![CDATA[When user click on search field.............................................passed
+And user search with "laptop"...............................................passed
+Then user could find "laptop" relative results..............................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="search feature test" name="user can search by product name 3" time="6.315">
+        <system-out><![CDATA[When user click on search field.............................................passed
+And user search with "nike".................................................passed
+Then user could find "nike" relative results................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="test hoover categories" name="hoover category and select sub category" time="7.149">
+        <system-out><![CDATA[When user hoover category and select sub-cat................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F06_homeSliders | user could open sliders" name="user could open first slider" time="15.99">
+        <failure message="Expected condition failed: waiting for value to contain &quot;display: block;&quot;. (tried for 10 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52978}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52978/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 2a38e3657179024aaefb642f29843be8" type="org.openqa.selenium.TimeoutException"><![CDATA[When user click on first slider.............................................failed
+Then prdouct details page for Nokia is opened...............................skipped
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for value to contain "display: block;". (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52978}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52978/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 2a38e3657179024aaefb642f29843be8
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDef.D06_homeSlidersStepDef.userClickOnFirstSlider(D06_homeSlidersStepDef.java:22)
+	at ✽.user click on first slider(file:///C:/Users/Dell/IdeaProjects/e_commerceDemo/src/main/resources/features/F06_homeSliders.feature:6)
+]]></failure>
+    </testcase>
+    <testcase classname="F06_homeSliders | user could open sliders" name="user could open first slider 2" time="5.829">
+        <failure message="The scenario has pending or undefined step(s)" type="java.lang.Exception"><![CDATA[When user click on second slider............................................undefined
+Then prdouct details page for iphone is opened..............................skipped
+]]></failure>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens facebook link" time="7.847">
+        <system-out><![CDATA[When user opens facebook link...............................................passed
+Then link is opened in new tab "https://www.facebook.com/nopCommerce".......passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens twitter link" time="7.929">
+        <system-out><![CDATA[When user opens twitter link................................................passed
+Then link is opened in new tab "https://twitter.com/nopCommerce"............passed
+]]></system-out>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens rss link" time="11.999">
+        <failure message="Expected condition failed: waiting for number of open windows to be 2 (tried for 5 second(s) with 500 milliseconds interval)&#10;Build info: version: '4.6.0', revision: '79f1c02ae20'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:53094}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53094/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 85d6e5075329df3219df2ea182ab0a74" type="org.openqa.selenium.TimeoutException"><![CDATA[When user opens rss link....................................................failed
+Then link is opened in new tab "https://demo.nopcommerce.com/news/rss/1"....skipped
+
+StackTrace:
+org.openqa.selenium.TimeoutException: Expected condition failed: waiting for number of open windows to be 2 (tried for 5 second(s) with 500 milliseconds interval)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.107, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: C:\Users\Dell\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:53094}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:53094/devtoo..., se:cdpVersion: 107.0.5304.107, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 85d6e5075329df3219df2ea182ab0a74
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at org.example.stepDef.D07_followUsStepDef.userOpensRssLink(D07_followUsStepDef.java:41)
+	at ✽.user opens rss link(file:///C:/Users/Dell/IdeaProjects/e_commerceDemo/src/main/resources/features/F07_followUs.feature:12)
+]]></failure>
+    </testcase>
+    <testcase classname="F07_followUs | users could open followUs links" name="user opens youtube link" time="9.701">
+        <system-out><![CDATA[When user opens youtube link................................................passed
+Then link is opened in new tab "https://www.youtube.com/user/nopCommerce"...passed
+]]></system-out>
+    </testcase>
+</testsuite>
